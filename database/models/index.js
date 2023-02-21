@@ -2,6 +2,7 @@ const User = require('./users.model');
 const Product = require('./products.model');
 const Order = require('./orders.model');
 const OrderItem = require('./order-items.model');
+const Chat = require('./chats.model');
 const Sequelize = require('./sequelize');
 
 Product.belongsTo(User, {
@@ -47,10 +48,22 @@ Product.hasMany(OrderItem, {
   foreignKey: 'id'
 })
 
+
+Chat.belongsTo(User, {
+  as: 'owner',
+  foreignKey: 'sender_id'
+})
+
+User.hasMany(Chat, {
+  as: 'chats',
+  foreignKey: 'id'
+})
+
 module.exports = {
   User,
   Product,
   Order,
   OrderItem,
+  Chat,
   Sequelize
 }

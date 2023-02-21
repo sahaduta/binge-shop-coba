@@ -20,7 +20,8 @@
     "joi": "^17.7.0",
     "jsonwebtoken": "^9.0.0",
     "pg": "^8.8.0",
-    "sequelize": "^6.28.0"
+    "sequelize": "^6.28.0",
+    "socket.io": "^4.6.0"
   },
   "devDependencies": {
     "@types/sequelize": "^4.28.14",

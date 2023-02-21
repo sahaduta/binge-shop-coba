@@ -13,6 +13,9 @@ class ItemsController {
             attributes: ['id', 'name', 'price', 'stock', 'sku'],
             limit: limitInt,
             offset: offset,
+            order: [
+                ['id', 'ASC'],
+            ],
             // raw : true
         });
         
