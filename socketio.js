@@ -1,7 +1,8 @@
 const { Chat, User } = require('./database/models');
 
 exports = module.exports = function(io) {
-    io.on('connection', async (socket) => {
+    // console.log('5555555555555')
+    io.of('/chat').on('connection', async (socket) => {
         
         // ambil user dari tabel users
         const sender = await User.findOne({
